@@ -5,13 +5,13 @@ Descrierea hardware
 Microcontroller principal – nRF52840 (U1)
 	SoC Bluetooth 5 / 802.15.4, ARM Cortex-M4F @ 64 MHz
 	1 MB Flash, 256 KB RAM
-	Gestionează logica aplicației, senzori, display și conectivitatea wireless
-	Antenă 2.4 GHz 2450AT18B100E (ANT1) plasată la marginea PCB, cu keepout de cupru
+	Gestioneaza logica aplicației, senzori, display si conectivitatea wireless
+	Antenă 2.4 GHz 2450AT18B100E (ANT1) plasata la marginea PCB, cu keepout de cupru
 	Cristal de 32 MHz (X2) pentru ceas RF
-	Rețea de adaptare RF (L1, L2, L3, C3, C4, C9 etc.)
+	Retea de adaptare RF (L1, L2, L3, C3, C4, C9 etc.)
 
-Încărcător baterie – BQ25180YBGR (IC1)
-	Încărcător LiPo single-cell (BGA 1.6 × 1.1 mm)
+Incarcator baterie – BQ25180YBGR (IC1)
+	Incarcator LiPo single-cell (BGA 1.6 × 1.1 mm)
 	Comunicare I2C cu MCU
 	Intrare alimentare: USB-C (VUSB)
 	Ieșire SYS pentru alimentarea sistemului
@@ -22,51 +22,51 @@ Fuel Gauge – MAX17048G+T10 (U2)
 	Monitorizare nivel baterie (SOC)
 	Consum redus (~3 µA în repaus)
 	Comunicare I2C
-	Conectat în paralel cu bateria
+	Conectat in paralel cu bateria
 
 Regulator buck-boost – RT6160AWSC (IC9)
 	Regulator DC-DC controlat prin I2C
-	Generează tensiune stabilă pentru display e-paper
-	Funcționează din tensiunea bateriei
-	Inductor L4 (68 µH) + pasive pentru comutație
+	Genereaza tensiune stabila pentru display e-paper
+	Functioneaza din tensiunea bateriei
+	Inductor L4 (68 µH) + pasive pentru comutie
 
 Display e-paper (EPD) – conector FPC (J3)
 	Conector Molex 503480-2400 (24 pini, pas 0.5 mm)
 	Control prin SPI + GPIO (BUSY, RST, DC, CS)
-	Circuit dedicat de alimentare (RT6160, diode, tranzistoare și pasive)
+	Circuit dedicat de alimentare (RT6160, diode, tranzistoare si pasive)
 
 Accelerometru / IMU – BMA423 (IC3)
 	Accelerometru triaxial
-	Funcții: pași, activitate, detectare înclinare, wake-up
+	Functii: pasi, activitate, detectare inclinare, wake-up
 	Comunicare I2C
-	Linie de întrerupere către GPIO
+	Linie de intrerupere catre GPIO
 
 Driver haptic – DRV2605YZFR (IC4)
 	Suport pentru motoare ERM și LRA
-	Bibliotecă internă de efecte haptice
+	Biblioteca interna de efecte haptice
 	Comunicare I2C
 	Pin EN controlat de MCU
 
 Protecție ESD – USBLC6-2SC6Y (D8)
-	Protecție pentru liniile USB D+ / D−
-	Plasată imediat după conectorul USB-C
+	Protectie pentru liniile USB D+ / D−
+	Plasata imediat după conectorul USB-C
 
 Butoane
 	3 butoane tactile SMD Panasonic EVP-AKE31A
 	SW_UP, SW_DN, SW_ENT
 	Pull-up extern: 10k la 3.3V (R1, R6, R10)
-	Poziționare dictată de carcasă
+	Pozitionare dictata de carcasa
 
 Conector debug – TC2030-IDC (J1)
-	Interfață SWD (fără conector montat)
+	Interfată SWD (fără conector montat)
 	Conectare prin pogo pins
 	Semnale: SWDIO, SWDCLK, GND, VCC, RESET
 
 Conector USB-C – KH-TYPE-C-16P (J5)
 	16 pini
-	VBUS → încărcător BQ25180
+	VBUS → incarcator BQ25180
 	D+ / D− → ESD → MCU
-	CC1 / CC2 cu rezistențe Rd 5.1k (mod device USB)
+	CC1 / CC2 cu rezistente Rd 5.1k (mod device USB)
 
 Utilizarea pinilor nRF52840
 
